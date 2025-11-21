@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMatch • Início</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page-home">
+    <header class="main-header">
+        <div class="layout-grid">
+            <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
+                <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo Tech Match">
+                <div class="brand-mark__text">
+                    <span>techmatch</span>
+                </div>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false">
+                <span class="menu-toggle__icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-toggle__label">Menu</span>
+            </button>
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="index.html" class="is-active">Início</a>
+                <a href="quemsomos.html">Integrantes</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+                <a href="match.html" data-nav-match data-role-guard="candidate">
+                    Match para candidatas
+                    <small>Painel principal</small>
+                </a>
+                <a href="match-empresas.html" data-nav-match data-role-guard="company">
+                    Match para empresas
+                    <small>Painel dedicado</small>
+                </a>
+            </nav>
+            <div class="header-controls">
+                <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+                    <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+                    <span class="theme-toggle__label">Modo escuro</span>
+                </button>
+                <div class="auth-controls">
+                    <span class="user-pill" data-user-badge hidden></span>
+                    <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
+                    <button class="button button-ghost button-small" type="button" data-logout hidden>Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="layout-grid hero-content">
+                <div>
+                    <p class="eyebrow">requalificação profissional</p>
+                    <h1>TechMatch mostra exatamente o que falta para você chegar confiante à próxima vaga.</h1>
+                    <p class="hero-lead">Uma experiência enxuta para cruzar requisitos reais de empresas com as habilidades que você já domina.</p>
+                    <ul class="hero-highlights">
+                        <li>
+                            <strong>Comparativos instantâneos</strong>
+                            <span>Match completo, parcial ou lacuna em segundos.</span>
+                        </li>
+                        <li>
+                            <strong>Lacunas evidentes</strong>
+                            <span>Destaques claros do que precisa de reforço.</span>
+                        </li>
+                        <li>
+                            <strong>Trilhas objetivas</strong>
+                            <span>Passos curtos com foco no próximo envio de currículo.</span>
+                        </li>
+                    </ul>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#interesses">Começar agora</a>
+                        <a class="button button-ghost" href="match.html">Ver painel da candidata</a>
+                    </div>
+                    <div class="hero-logos" aria-label="Identidade visual Tech Match">
+                        <img src="assets/images/logo-text.svg" alt="Tech Match" loading="lazy">
+                        <span>Clareza para quem está evoluindo de carreira e quer falar a mesma língua que o mercado.</span>
+                    </div>
+                </div>
+                <div class="hero-visual hero-visual--summary">
+                    <div class="hero-visual__panel">
+                        <p class="eyebrow">fluxo rápido</p>
+                        <h3>O que acontece depois do login</h3>
+                        <ul class="hero-visual__list">
+                            <li>1. Defina objetivo e conte o momento atual.</li>
+                            <li>2. Cadastre as habilidades que já domina.</li>
+                            <li>3. Receba cards de match e trilhas sugeridas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="layout-grid feature-layout">
+                <div class="section-stack">
+                    <header class="section-header">
+                        <p class="eyebrow">porque o projeto existe</p>
+                        <h2>Reduzimos o abismo entre o seu perfil e o que o mercado realmente pede.</h2>
+                        <p class="section-lead">Menos texto, mais clareza: cards que mostram o que está pronto, o que falta e quais trilhas seguir.</p>
+                    </header>
+                    <ul class="stats-list stats-list--minimal">
+                        <li>
+                            <strong>Vaga alvo</strong>
+                            <span>cargo + 3 requisitos urgentes</span>
+                        </li>
+                        <li>
+                            <strong>Seu perfil</strong>
+                            <span>nome + 3 habilidades fortes</span>
+                        </li>
+                        <li>
+                            <strong>Análise TechMatch</strong>
+                            <span>match, lacunas e trilhas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <p class="eyebrow">01</p>
+                        <h3>Análise direta</h3>
+                        <p>Cada requisito da vaga é comparado com as habilidades cadastradas pelo candidato, deixando claro se
+                            há match completo, parcial ou nenhuma aderência.</p>
+                        <span class="tag-chip">Comparativo 1:1</span>
+                    </article>
+                    <article class="info-card">
+                        <p class="eyebrow">02</p>
+                        <h3>Identificação de lacunas</h3>
+                        <p>Quando uma habilidade não aparece no perfil do candidato, o TechMatch evidencia o ponto crítico e
+                            explica por que ele é importante para a função.</p>
+                        <span class="tag-chip">Visão objetiva</span>
+                    </article>
+                    <article class="info-card">
+                        <p class="eyebrow">03</p>
+                        <h3>Trilha personalizada</h3>
+                        <p>O sistema gera uma trilha de estudo com passos práticos para desenvolver as competências em falta,
+                            alinhada às expectativas da vaga.</p>
+                        <span class="tag-chip">Plano rápido</span>
+                    </article>
+                    <article class="info-card">
+                        <p class="eyebrow">04</p>
+                        <h3>Comunicação acessível</h3>
+                        <p>Todo o processo foi pensado para ser compreendido por qualquer pessoa, sem jargões técnicos ou
+                            camadas complexas.</p>
+                        <span class="tag-chip">Linguagem simples</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section brand-showcase" aria-labelledby="brand-showcase-title">
+            <div class="layout-grid brand-panel">
+                <div class="brand-panel__content">
+                    <header class="section-header">
+                        <p class="eyebrow">descrição do projeto</p>
+                        <h2 id="brand-showcase-title">Uma resposta simples para um problema urgente do mercado.</h2>
+                        <p class="section-lead">Automação e IA apertaram o passo. O TechMatch traduz cada requisito em orientação prática para você agir rápido.</p>
+                    </header>
+                    <div class="brand-panel__badges">
+                        <img src="assets/images/logo-icon.svg" alt="Logo Tech Match" loading="lazy">
+                        <img src="assets/images/logo-text.svg" alt="Marca completa Tech Match" loading="lazy">
+                    </div>
+                    <ul class="brand-panel__list">
+                        <li>Empresas descrevem cargos e requisitos prioritários.</li>
+                        <li>Você registra objetivo e habilidades que já domina.</li>
+                        <li>O sistema mostra match, lacunas e o próximo passo.</li>
+                    </ul>
+                </div>
+                <div class="brand-panel__cards">
+                    <article class="badge-card">
+                        <p class="eyebrow">clareza</p>
+                        <h3>Comparar</h3>
+                        <p>Mostra de forma objetiva quais habilidades já estão alinhadas com os requisitos da vaga.</p>
+                    </article>
+                    <article class="badge-card">
+                        <p class="eyebrow">orientação</p>
+                        <h3>Analisar</h3>
+                        <p>Expõe o que precisa ser aperfeiçoado antes da candidatura, indicando prioridades de estudo.</p>
+                    </article>
+                    <article class="badge-card">
+                        <p class="eyebrow">ação</p>
+                        <h3>Agir</h3>
+                        <p>Gera uma trilha personalizada, simples e objetiva para diminuir a lacuna de competências.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="interesses">
+            <div class="layout-grid form-layout">
+                <div class="section-stack">
+                    <header class="section-header">
+                        <p class="eyebrow">techmatch</p>
+                        <h2>Conte seu momento profissional e o foco da próxima vaga.</h2>
+                        <p class="section-lead">Centralizamos as informações no painel autenticado para que tudo fique salvo no seu perfil.</p>
+                    </header>
+                    <div class="info-card">
+                        <h3>Como funciona</h3>
+                        <p>Compare requisitos, veja lacunas e receba uma trilha objetiva diretamente no painel.</p>
+                        <ul class="bullet-list">
+                            <li>• Faça login e cadastre suas habilidades.</li>
+                            <li>• Receba sugestões alinhadas aos requisitos cadastrados.</li>
+                            <li>• Salve os matches favoritos para revisar depois.</li>
+                        </ul>
+                    </div>
+                </div>
+                <article class="info-card">
+                    <p class="eyebrow">próximo passo</p>
+                    <h3>Entre no TechMatch para registrar interesses.</h3>
+                    <p>O formulário foi incorporado ao painel seguro. Basta criar um usuário gratuito para liberar o comparativo em qualquer dispositivo.</p>
+                    <ul class="bullet-list">
+                        <li>• Perfil com resumo profissional.</li>
+                        <li>• Registro de interesses e habilidades.</li>
+                        <li>• Painel de match sempre sincronizado.</li>
+                    </ul>
+                    <a class="button button-primary" href="login.html">Ir para login e cadastro</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-highlight">
+            <div class="layout-grid visual-grid">
+                <article class="info-card">
+                    <h3>Visão do mercado</h3>
+                    <p>Contextualizamos as mudanças trazidas pela automação, indicando quais profissões estão em
+                        transformação e por quê.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Match entre vaga e candidato</h3>
+                    <p>O painel ilustra o quanto cada habilidade atende ao requisito proposto pela empresa.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Lacunas evidenciadas</h3>
+                    <p>Sinalizamos o que falta e indicamos materiais confiáveis.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="layout-grid">
+                <header class="section-header">
+                    <p class="eyebrow">jornada guiada</p>
+                    <h2>Veja como a análise acontece do envio da vaga até a trilha recomendada.</h2>
+                    <p class="section-lead">Quatro passos curtos e transparentes.</p>
+                </header>
+                <div class="timeline">
+                    <article class="timeline-step">
+                        <h3>1. Empresa descreve a vaga</h3>
+                        <p>Cadastro direto no painel Match Empresas.</p>
+                    </article>
+                    <article class="timeline-step">
+                        <h3>2. Candidato cadastra habilidades</h3>
+                        <p>Nome, foco profissional e habilidades fortes entram em cena.</p>
+                    </article>
+                    <article class="timeline-step">
+                        <h3>3. TechMatch compara perfis</h3>
+                        <p>Match, atendimento parcial ou lacunas destacadas em cards.</p>
+                    </article>
+                    <article class="timeline-step">
+                        <h3>4. Trilha de estudo personalizada</h3>
+                        <p>Você recebe passos práticos para reduzir a distância.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cta">
+            <div class="layout-grid split-panel">
+                <div class="info-card">
+                    <p class="eyebrow">transparência</p>
+                    <h3>Por que confiar</h3>
+                    <p>Critérios visíveis, sem texto excessivo e com acesso rápido ao histórico.</p>
+                </div>
+                <div class="info-card">
+                    <p class="eyebrow">convite</p>
+                    <h3>Experimente o match</h3>
+                    <p>Faça login, cadastre habilidades e visualize os pontos fortes em segundos.</p>
+                    <a class="button button-primary" href="match.html">Abrir TechMatch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="layout-grid footer-grid">
+            <div class="footer-brand">
+                <span class="footer-brand__tag">ENTREGA</span>
+                <div class="footer-brand__content">
+                    <span class="footer-eyebrow">FIAP • FRONT-END DESIGN ENGINEERING</span>
+                    <h3>TechMatch</h3>
+                    <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <h4>Contato do grupo</h4>
+                <ul class="footer-list footer-list--contacts">
+                    <li><a href="mailto:guilhermepeustaquio@gmail.com">guilhermepeustaquio@gmail.com</a></li>
+                    <li><a href="mailto:caiocc2006@gmail.com">caiocc2006@gmail.com</a></li>
+                    <li><a href="mailto:matheustavares1356@gmail.com">matheustavares1356@gmail.com</a></li>
+                </ul>
+                <p class="footer-note">Repositório e README atualizados no GitHub.</p>
+            </div>
+        </div>
+        <div class="footer-meta">
+            <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
+        </div>
+    </footer>
+    <script src="assets/js/theme-toggle.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
