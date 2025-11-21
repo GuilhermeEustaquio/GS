@@ -41,8 +41,8 @@
   --job-tag-border: rgba(255, 255, 255, 0.12);
   --job-detail-bg: rgba(4, 10, 22, 0.6);
   --job-detail-border: rgba(148, 163, 184, 0.35);
-  --container-max: 1200px;
-  --gutter: clamp(1rem, 2vw, 2.5rem);
+  --container-max: clamp(320px, 94vw, 1320px);
+  --gutter: clamp(1rem, 5vw, 3rem);
   --hero-visual-glow: rgba(30, 134, 255, 0.22);
   --hero-panel-bg: rgba(4, 11, 27, 0.82);
   --hero-panel-border: rgba(255, 255, 255, 0.12);

@@ -82,7 +82,7 @@
                     <div class="auth-panel" id="entrar">
                         <div class="auth-panel__header">
                             <p class="eyebrow">entrar ou registrar</p>
-                            <h2>Painel rápido e responsivo.</h2>
+                            <h2>Painel rápido e simplificado</h2>
                             <p>Preencha apenas os campos necessários. Mantivemos a experiência acessível tanto para desktop
                                 quanto para dispositivos móveis.</p>
                         </div>
@@ -110,7 +110,9 @@
                                     <label for="register-password">Crie uma senha</label>
                                     <input type="password" id="register-password" name="register-password" placeholder="mínimo 6 caracteres" autocomplete="new-password" minlength="6" required>
                                 </div>
-                                
+
+                                <input type="hidden" name="register-role" value="candidate">
+
                                 <button class="button button-primary" type="submit">Criar conta</button>
                                 <p class="form-feedback" data-register-feedback aria-live="polite"></p>
                             </form>

@@ -413,7 +413,6 @@
       requirements: jobForm.querySelector('[name="core-requirements"]').value,
       differentials: jobForm.querySelector('[name="nice-to-have"]').value,
       image: jobForm.querySelector('[name="role-image"]').value,
-      roadmap: jobForm.querySelector('[name="role-roadmap"]').value,
       requiredSkills: selectedJobSkills
     };
 
@@ -593,7 +592,6 @@
   const swipeDescription = document.querySelector('[data-swipe-card-description]');
   const swipeMeta = document.querySelector('[data-swipe-card-meta]');
   const swipeNote = document.querySelector('[data-swipe-card-note]');
-  const swipeRoadmap = document.querySelector('[data-swipe-card-roadmap]');
   const swipeProgress = document.querySelector('[data-swipe-progress]');
   const swipeSkills = document.querySelector('[data-swipe-card-skills]');
   const favoritesFeed = document.querySelector('[data-favorites-feed]');
@@ -609,7 +607,6 @@
     swipeTitle &&
     swipeDescription &&
     swipeMeta &&
-    swipeRoadmap &&
     swipeProgress &&
     favoritesFeed
   ) {
@@ -623,7 +620,6 @@
         company: job.company || 'Empresa confidencial',
         category: job.company || 'Empresa confidencial',
         description: job.requirements || 'A empresa não detalhou os requisitos prioritários.',
-        roadmap: job.roadmap || '',
         differentials: job.differentials || '',
         seniority: job.seniority || '',
         image: job.image || '',
@@ -677,7 +673,6 @@
         swipeSkills.innerHTML = '';
         swipeSkills.hidden = true;
       }
-      swipeRoadmap.textContent = 'Assim que novas oportunidades forem cadastradas, exibiremos o roadmap sugerido por aqui.';
       swipeImage.textContent = '—';
       swipeImage.style.backgroundImage = '';
       swipeProgress.textContent = 'Sem vagas ativas';
@@ -729,7 +724,6 @@
           swipeNote.textContent = '';
         }
       }
-      swipeRoadmap.textContent = job.roadmap || 'A empresa ainda não detalhou um roadmap para esta vaga.';
       setImage(job);
       const currentPosition = Math.min(viewedJobs + 1, Math.max(totalJobs, 1));
       swipeProgress.textContent = `Vaga ${currentPosition} de ${Math.max(totalJobs, 1)}`;
@@ -759,7 +753,6 @@
         <h4>${match.title || 'Favorito'}</h4>
         <p>${match.description || 'Sem descrição disponível.'}</p>
         ${match.differentials ? `<p><strong>Diferenciais:</strong> ${match.differentials}</p>` : ''}
-        ${match.roadmap ? `<div class="interest-detail__roadmap"><p class="eyebrow">Roadmap sugerido</p><p>${match.roadmap}</p></div>` : ''}
       `;
     };
 

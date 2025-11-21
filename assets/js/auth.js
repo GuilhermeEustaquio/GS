@@ -29,13 +29,38 @@
     skills: []
   });
   const normalizeRole = (role) => (role === 'company' ? 'company' : DEFAULT_ROLE);
-  const seedUser = {
-    username: 'eustaquio',
-    password: 'eustaquio2005',
-    favorites: [],
-    role: DEFAULT_ROLE,
-    profile: createEmptyProfile()
-  };
+    const seedUsers = [
+    {
+      username: 'eustaquio',
+      password: 'eustaquio2005',
+      favorites: [],
+      role: DEFAULT_ROLE,
+      profile: createEmptyProfile()
+    },
+    {
+      username: 'techmatch',
+      password: '123456',
+      favorites: [],
+      role: 'company',
+      profile: createEmptyProfile()
+    }
+  ];
+
+  const seedJobs = [
+    {
+      id: 'job_seed_techmatch_frontend',
+      company: 'TechMatch',
+      role: 'Front-end Engineer',
+      seniority: 'Pleno',
+      requirements:
+        'Conduzir a construção de interfaces responsivas, garantindo acessibilidade e performance para o painel das candidatas.',
+      differentials: 'Experiência com testes automatizados e colaboração próxima com squads de produto.',
+      image: 'assets/images/logo-icon.svg',
+      requiredSkills: ['front-end', 'javascript', 'css'],
+      createdAt: '2024-12-01T12:00:00.000Z',
+      createdBy: 'techmatch'
+    }
+  ];
 
   const safeParse = (value, label = 'os dados salvos') => {
     try {
@@ -72,13 +97,15 @@
   };
   const normalizeUsername = (username = '') => username.trim().toLowerCase();
 
-  const ensureSeedUser = () => {
+  const ensureSeedUsers = () => {
     const users = getUsers();
     let needsSave = false;
-    if (!users.some((user) => user.username === seedUser.username)) {
-      users.push(seedUser);
-      needsSave = true;
-    }
+    seedUsers.forEach((seed) => {
+      if (!users.some((user) => user.username === seed.username)) {
+        users.push({ ...seed, profile: { ...seed.profile }, favorites: [...seed.favorites] });
+        needsSave = true;
+      }
+    });
 
     users.forEach((user) => {
       if (!user.role || (user.role !== 'candidate' && user.role !== 'company')) {
@@ -92,7 +119,25 @@
     }
   };
 
-  ensureSeedUser();
+   const ensureSeedJobs = () => {
+    const jobs = getStoredJobs();
+    const existingIds = new Set(jobs.map((job) => job.id));
+    let needsSave = false;
+
+    seedJobs.forEach((job) => {
+      if (!existingIds.has(job.id)) {
+        jobs.push({ ...job, requiredSkills: [...job.requiredSkills] });
+        needsSave = true;
+      }
+    });
+
+    if (needsSave) {
+      saveJobs(jobs);
+    }
+  };
+
+  ensureSeedUsers();
+  ensureSeedJobs();
 
   const ensureProfileShape = (user) => {
     if (!user) {
@@ -675,7 +720,7 @@
         event.preventDefault();
         const username = registerForm.querySelector('[name="register-username"]').value;
         const password = registerForm.querySelector('[name="register-password"]').value;
-        const role = registerForm.querySelector('[name="register-role"]').value;
+        const role = registerForm.querySelector('[name="register-role"]')?.value ?? 'candidate';
         const feedback = registerForm.querySelector('[data-register-feedback]');
         const result = register(username, password, role);
         setFeedback(feedback, result.message, result.success ? 'success' : 'error');

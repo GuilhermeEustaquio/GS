@@ -7,7 +7,7 @@
 }
 
 .page-match-candidate .profile-panel {
-  grid-template-columns: minmax(320px, 1fr) minmax(540px, 1.5fr);
+  grid-template-columns: 1fr;
 }
 
 .page-match-company .profile-panel {
@@ -133,7 +133,7 @@
 
 .skill-selector {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
   padding: 0.35rem 0;
 }
