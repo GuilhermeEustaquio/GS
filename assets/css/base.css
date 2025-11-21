@@ -301,6 +301,13 @@ img {
   align-items: center;
 }
 
+.auth-controls .button {
+  padding: 0.45rem 0.85rem;
+  min-width: auto;
+  min-height: 2.2rem;
+  font-size: 0.95rem;
+}
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;

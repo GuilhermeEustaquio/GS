@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMatch • FAQ</title>
+
+    <!-- Estilos principais -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+
+    <!-- ========================= HEADER ========================= -->
     <header class="main-header">
         <div class="layout-grid">
+
+            <!-- Marca / Logo -->
             <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
                 <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo TechMatch">
                 <div class="brand-mark__text">
                     <span>techmatch</span>
                 </div>
             </a>
+
+            <!-- Botão mobile do menu -->
             <button class="menu-toggle" type="button" aria-expanded="false">
                 <span class="menu-toggle__icon" aria-hidden="true">
                     <span></span>
@@ -23,12 +31,16 @@
                 </span>
                 <span class="menu-toggle__label">Menu</span>
             </button>
+
+            <!-- Navegação principal -->
             <nav class="main-nav" aria-label="Menu principal">
                 <a href="index.html">Início</a>
                 <a href="quemsomos.html">Integrantes</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="faq.html" class="is-active">FAQ</a>
                 <a href="contato.html">Contato</a>
+
+                <!-- Links condicionados ao tipo de usuário -->
                 <a href="match.html" data-nav-match data-role-guard="candidate">
                     Match para candidatas
                     <small>Painel principal</small>
@@ -38,11 +50,17 @@
                     <small>Painel dedicado</small>
                 </a>
             </nav>
+
+            <!-- Controles do cabeçalho: tema e login -->
             <div class="header-controls">
+
+                <!-- Botão de alternar tema -->
                 <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
                     <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
                     <span class="theme-toggle__label">Modo escuro</span>
                 </button>
+
+                <!-- Controle de autenticação -->
                 <div class="auth-controls">
                     <span class="user-pill" data-user-badge hidden></span>
                     <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
@@ -51,16 +69,22 @@
             </div>
         </div>
     </header>
+    <!-- ========================= FIM HEADER ========================= -->
 
+
+    <!-- ========================= HERO ========================= -->
     <main>
         <section class="hero">
             <div class="layout-grid hero-content">
+
+                <!-- Texto principal -->
                 <div>
                     <p class="eyebrow">perguntas frequentes</p>
                     <h1>Tire dúvidas sobre como o TechMatch compara vagas e candidatos.</h1>
-                    <p>Respondemos às perguntas mais comuns sobre cadastro de requisitos, análise de lacunas e geração das
-                        trilhas de estudo.</p>
+                    <p>Respondemos às perguntas mais comuns sobre cadastro de requisitos, análise de lacunas e geração das trilhas de estudo.</p>
                 </div>
+
+                <!-- Painel lateral com lista rápida -->
                 <div class="hero-visual hero-visual--summary">
                     <div class="hero-visual__panel">
                         <p class="eyebrow">respostas rápidas</p>
@@ -71,61 +95,77 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
+        <!-- ========================= FIM HERO ========================= -->
 
+
+        <!-- ========================= FAQ ========================= -->
         <section class="section">
             <div class="layout-grid">
                 <div class="faq-layout">
+
+                    <!-- FAQ ITEM 1 -->
                     <article class="faq-item">
                         <button class="faq-question" type="button" data-accordion aria-controls="faq-answer-1" aria-expanded="false">
                             <span>Como cadastro requisitos da vaga e habilidades do candidato?</span>
                             <span class="faq-question__symbol" aria-hidden="true">+</span>
                         </button>
+
                         <div class="faq-answer" id="faq-answer-1" hidden>
-                            Faça login para registrar o perfil da candidata e utilize o painel Match Empresas para cadastrar
-                            os requisitos da vaga. As informações ficam salvas no navegador e o comparativo aparece
-                            automaticamente para quem recebeu o link seguro.
+                            Faça login para registrar o perfil da candidata e utilize o painel Match Empresas para cadastrar os requisitos da vaga. As informações ficam salvas no navegador e o comparativo aparece automaticamente para quem recebeu o link seguro.
                         </div>
                     </article>
+
+                    <!-- FAQ ITEM 2 -->
                     <article class="faq-item">
                         <button class="faq-question" type="button" data-accordion aria-controls="faq-answer-2" aria-expanded="false">
                             <span>Como o TechMatch identifica lacunas?</span>
                             <span class="faq-question__symbol" aria-hidden="true">+</span>
                         </button>
+
                         <div class="faq-answer" id="faq-answer-2" hidden>
-                            Cada requisito recebe três estados: atendido, parcialmente atendido ou não atendido. Quando um
-                            requisito não encontra habilidade correspondente, o sistema marca a lacuna e sugere conteúdos para
-                            estudo.
+                            Cada requisito recebe três estados: atendido, parcialmente atendido ou não atendido. Quando um requisito não encontra habilidade correspondente, o sistema marca a lacuna e sugere conteúdos para estudo.
                         </div>
                     </article>
+
+                    <!-- FAQ ITEM 3 -->
                     <article class="faq-item">
                         <button class="faq-question" type="button" data-accordion aria-controls="faq-answer-3" aria-expanded="false">
                             <span>Como conquistar uma vaga mesmo sem atender a todos os requisitos?</span>
                             <span class="faq-question__symbol" aria-hidden="true">+</span>
                         </button>
+
                         <div class="faq-answer" id="faq-answer-3" hidden>
-                           A TechMatch utiliza um chatbot inteligente que analisa seu perfil profissional, identifica suas competências atuais e compara com as exigências da vaga desejada. Com base nessa avaliação, o sistema recomenda o curso mais adequado e aponta as qualificações que ainda precisam ser desenvolvidas, orientando sua evolução de maneira objetiva e direcionada.
+                            A TechMatch utiliza um chatbot inteligente que analisa seu perfil profissional, identifica suas competências atuais e compara com as exigências da vaga desejada. Com base nisso, recomenda o curso mais adequado e indica as qualificações que ainda precisam ser desenvolvidas, orientando sua evolução de maneira objetiva.
                         </div>
                     </article>
+
+                    <!-- FAQ ITEM 4 -->
                     <article class="faq-item">
                         <button class="faq-question" type="button" data-accordion aria-controls="faq-answer-4" aria-expanded="false">
                             <span>O TechMatch funciona em celulares?</span>
                             <span class="faq-question__symbol" aria-hidden="true">+</span>
                         </button>
+
                         <div class="faq-answer" id="faq-answer-4" hidden>
-                            Sim. A experiência completa – formulário, painel de comparação e trilhas sugeridas – responde bem em
-                            telas menores, mantendo botões acessíveis para toque.
+                            Sim. A experiência completa – formulário, painel de comparação e trilhas sugeridas – responde bem em telas menores, mantendo botões acessíveis para toque.
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
+        <!-- ========================= FIM FAQ ========================= -->
     </main>
 
 
+    <!-- ========================= FOOTER ========================= -->
     <footer class="site-footer">
         <div class="layout-grid footer-grid">
+
+            <!-- Identificação do projeto -->
             <div class="footer-brand">
                 <span class="footer-brand__tag">ENTREGA</span>
                 <div class="footer-brand__content">
@@ -134,6 +174,8 @@
                     <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
                 </div>
             </div>
+
+            <!-- Contatos -->
             <div class="footer-info">
                 <h4>Contato do grupo</h4>
                 <ul class="footer-list footer-list--contacts">
@@ -143,6 +185,8 @@
                 </ul>
                 <p class="footer-note">Repositório e README atualizados no GitHub.</p>
             </div>
+
+            <!-- Links úteis -->
             <div class="footer-info">
                 <h4>Acesse</h4>
                 <ul class="footer-list footer-list--contacts">
@@ -154,12 +198,19 @@
                 </ul>
             </div>
         </div>
+
+        
         <div class="footer-meta">
             <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
         </div>
     </footer>
+    <!-- ========================= FIM FOOTER ========================= -->
+
+
+    <!-- Scripts do site -->
     <script src="assets/js/theme-toggle.js" defer></script>
     <script src="assets/js/auth.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+
 </body>
 </html>

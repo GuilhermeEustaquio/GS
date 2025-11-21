@@ -4,165 +4,296 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMatch • Quem Somos</title>
+
+    <!-- Folha de estilos principal -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
+
+    <!-- =======================================================
+         HEADER — Navegação principal + controles do usuário
+    ======================================================== -->
     <header class="main-header">
         <div class="layout-grid">
+
+            <!-- Identidade visual e link para a Home -->
             <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
                 <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo TechMatch">
-                <div class="brand-mark__text">
-                    <span>techmatch</span>
-                </div>
+                <div class="brand-mark__text"><span>techmatch</span></div>
             </a>
+
+            <!-- Botão para abrir o menu em dispositivos móveis -->
             <button class="menu-toggle" type="button" aria-expanded="false">
                 <span class="menu-toggle__icon" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </span>
                 <span class="menu-toggle__label">Menu</span>
             </button>
+
+            <!-- Menu principal de navegação -->
             <nav class="main-nav" aria-label="Menu principal">
                 <a href="index.html">Início</a>
                 <a href="quemsomos.html" class="is-active">Integrantes</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contato.html">Contato</a>
+
+                <!-- Links exibidos conforme tipo de usuário -->
                 <a href="match.html" data-nav-match data-role-guard="candidate">
                     Match para candidatas
                     <small>Painel principal</small>
                 </a>
+
                 <a href="match-empresas.html" data-nav-match data-role-guard="company">
                     Match para empresas
                     <small>Painel dedicado</small>
                 </a>
             </nav>
+
+            <!-- Controle de tema e autenticação -->
             <div class="header-controls">
+
+                <!-- Alternância entre modo claro/escuro -->
                 <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
                     <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
                     <span class="theme-toggle__label">Modo escuro</span>
                 </button>
+
+                <!-- Status do usuário (logado ou não) -->
                 <div class="auth-controls">
                     <span class="user-pill" data-user-badge hidden></span>
-                    <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
-                    <button class="button button-ghost button-small" type="button" data-logout hidden>Sair</button>
+                    <a class="button button-ghost button-small" href="login.html" data-login-link>
+                        Entrar
+                    </a>
+                    <button class="button button-ghost button-small" type="button" data-logout hidden>
+                        Sair
+                    </button>
                 </div>
+
             </div>
         </div>
     </header>
 
+
+    <!-- =======================================================
+         HERO — Apresentação dos integrantes e missão do time
+    ======================================================== -->
     <main>
         <section class="hero">
             <div class="layout-grid hero-content">
+
+                <!-- Texto de introdução da página -->
                 <div>
                     <p class="eyebrow">integrantes</p>
-                    <h1>Integramos pesquisa, desenvolvimento e atendimento para manter o TechMatch vivo.</h1>
-                    <p>Pesquisamos requisitos reais de vagas, coletamos depoimentos de profissionais em transição e
-                        atualizamos continuamente os dados que alimentam o projeto.</p>
+
+                    <h1>
+                        Integramos pesquisa, desenvolvimento e atendimento para manter o TechMatch vivo.
+                    </h1>
+
+                    <p>
+                        Pesquisamos requisitos reais de vagas, coletamos depoimentos de profissionais em transição e
+                        atualizamos continuamente os dados que alimentam o projeto.
+                    </p>
                 </div>
+
+                <!-- Painel lateral com destaques -->
                 <div class="hero-visual hero-visual--summary">
                     <div class="hero-visual__panel">
                         <p class="eyebrow">frentes de atuação</p>
+
                         <ul class="hero-visual__list">
                             <li>Pesquisa com candidatas em transição.</li>
                             <li>Construção do painel e da experiência.</li>
                             <li>Rotina de testes e mentorias.</li>
                         </ul>
                     </div>
-                   
                 </div>
+
             </div>
         </section>
 
+
+        <!-- =======================================================
+             BLOCO — Cards dos integrantes
+        ======================================================== -->
         <section class="section">
             <div class="layout-grid">
+
+                <!-- Cabeçalho da seção -->
                 <header class="section-header">
                     <p class="eyebrow">quem faz</p>
                     <h2>Conheça quem mantém a plataforma ativa.</h2>
-                    <p>Conheça quem lidera o desenvolvimento, as integrações e a governança do TechMatch.</p>
+                    <p>
+                        Conheça quem lidera o desenvolvimento, integrações
+                        e governança do TechMatch.
+                    </p>
                 </header>
+
+                <!-- Cards com fotos, nomes, RM e links -->
                 <div class="cards-grid team-grid">
+
+                    <!-- Integrante 1 -->
                     <article class="team-card">
                         <div class="team-card__photo-wrapper">
-                            <img src="assets/images/eustaquio.PNG" alt="Retrato de Guilherme Pinto" class="team-card__photo">
+                            <img src="assets/images/eustaquio.PNG"
+                                 alt="Retrato de Guilherme Pinto"
+                                 class="team-card__photo">
                         </div>
                         <h3>Guilherme Pinto</h3>
-                        <p class="team-card__role">RM 566784 • guilhermepeustaquio@gmail.com</p>
+                        <p class="team-card__role">
+                            RM 566784 • guilhermepeustaquio@gmail.com
+                        </p>
+
                         <div class="team-card__actions">
-                            <a class="button button-ghost button-small" href="https://www.linkedin.com/in/guilherme-eustaquio/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a class="button button-primary button-small" href="https://github.com/guilhermepeustaquio" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button-ghost button-small"
+                               href="https://www.linkedin.com/in/guilherme-eustaquio/"
+                               target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+
+                            <a class="button button-primary button-small"
+                               href="https://github.com/guilhermepeustaquio"
+                               target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
                         </div>
                     </article>
+
+                    <!-- Integrante 2 -->
                     <article class="team-card">
                         <div class="team-card__photo-wrapper">
-                            <img src="assets/images/caioperfil.jpeg" alt="Retrato de Caio Couto" class="team-card__photo">
+                            <img src="assets/images/caioperfil.jpeg"
+                                 alt="Retrato de Caio Couto"
+                                 class="team-card__photo">
                         </div>
                         <h3>Caio Couto</h3>
-                        <p class="team-card__role">RM 563452 • <br>caiocc2006@gmail.com</p>
+                        <p class="team-card__role">
+                            RM 563452 • <br>caiocc2006@gmail.com
+                        </p>
+
                         <div class="team-card__actions">
-                            <a class="button button-ghost button-small" href="https://www.linkedin.com/in/caio-couto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a class="button button-primary button-small" href="https://github.com/caiocc" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button-ghost button-small"
+                               href="https://www.linkedin.com/in/caio-couto/"
+                               target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+
+                            <a class="button button-primary button-small"
+                               href="https://github.com/caiocc"
+                               target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
                         </div>
                     </article>
+
+                    <!-- Integrante 3 -->
                     <article class="team-card">
                         <div class="team-card__photo-wrapper">
-                            <img src="assets/images/euperfil.jpg" alt="Retrato de Matheus Tavares" class="team-card__photo">
+                            <img src="assets/images/euperfil.jpg"
+                                 alt="Retrato de Matheus Tavares"
+                                 class="team-card__photo">
                         </div>
                         <h3>Matheus Tavares</h3>
-                        <p class="team-card__role">RM 566844 • matheustavares1356@gmail.com</p>
+                        <p class="team-card__role">
+                            RM 566844 • matheustavares1356@gmail.com
+                        </p>
+
                         <div class="team-card__actions">
-                            <a class="button button-ghost button-small" href="https://www.linkedin.com/in/matheus-tavares/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a class="button button-primary button-small" href="https://github.com/matheustavares" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="button button-ghost button-small"
+                               href="https://www.linkedin.com/in/matheus-tavares/"
+                               target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+
+                            <a class="button button-primary button-small"
+                               href="https://github.com/matheustavares"
+                               target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
 
+
+        <!-- =======================================================
+             BLOCO — Manifesto e próximos passos
+        ======================================================== -->
         <section class="section">
             <div class="layout-grid split-panel">
+
+                <!-- Card manifesto -->
                 <div class="info-card">
                     <p class="eyebrow">manifesto</p>
                     <h3>Construímos com propósito.</h3>
-                    <p>Transparência, acessibilidade e colaboração definem nosso trabalho. Transformamos dados complexos sobre o
-                        futuro do trabalho em orientações que qualquer pessoa consegue seguir.</p>
+
+                    <p>
+                        Transparência, acessibilidade e colaboração definem nosso trabalho.
+                        Transformamos dados complexos sobre o futuro do trabalho em orientações simples
+                        que qualquer pessoa consegue seguir.
+                    </p>
                 </div>
+
+                <!-- Card próximos passos -->
                 <div class="info-card">
                     <p class="eyebrow">no radar</p>
                     <h3>Próximos passos</h3>
+
                     <ul>
-                        <li> Integrar dados oficiais de vagas para garantir requisitos atualizados.</li>
-                        <li> Publicar novos relatórios sobre lacunas de habilidades e resultados das trilhas.</li>
-                        <li> Conectar métricas reais de empregabilidade ao painel de match.</li>
+                        <li>Integrar dados oficiais de vagas para garantir requisitos atualizados.</li>
+                        <li>Publicar relatórios sobre lacunas de habilidades e resultados das trilhas.</li>
+                        <li>Conectar métricas reais de empregabilidade ao painel de match.</li>
                     </ul>
                 </div>
+
             </div>
         </section>
     </main>
 
 
+    <!-- =======================================================
+         FOOTER — Informações institucionais e contatos
+    ======================================================== -->
     <footer class="site-footer">
         <div class="layout-grid footer-grid">
+
+            <!-- Identidade visual no rodapé -->
             <div class="footer-brand">
                 <span class="footer-brand__tag">ENTREGA</span>
+
                 <div class="footer-brand__content">
-                    <span class="footer-eyebrow">FIAP • FRONT-END DESIGN ENGINEERING</span>
+                    <span class="footer-eyebrow">
+                        FIAP • FRONT-END DESIGN ENGINEERING
+                    </span>
+
                     <h3>TechMatch</h3>
-                    <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
+
+                    <p>
+                        Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.
+                    </p>
                 </div>
             </div>
+
+            <!-- Lista de contatos -->
             <div class="footer-info">
                 <h4>Contato do grupo</h4>
+
                 <ul class="footer-list footer-list--contacts">
                     <li><a href="mailto:guilhermepeustaquio@gmail.com">guilhermepeustaquio@gmail.com</a></li>
                     <li><a href="mailto:caiocc2006@gmail.com">caiocc2006@gmail.com</a></li>
                     <li><a href="mailto:matheustavares1356@gmail.com">matheustavares1356@gmail.com</a></li>
                 </ul>
+
                 <p class="footer-note">Repositório e README atualizados no GitHub.</p>
             </div>
+
+            <!-- Navegação adicional -->
             <div class="footer-info">
                 <h4>Acesse</h4>
+
                 <ul class="footer-list footer-list--contacts">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="quemsomos.html">Quem somos?</a></li>
@@ -171,13 +302,19 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
+
         </div>
+
         <div class="footer-meta">
             <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
         </div>
     </footer>
+
+
+    <!-- Scripts essenciais -->
     <script src="assets/js/theme-toggle.js" defer></script>
     <script src="assets/js/auth.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+
 </body>
 </html>
