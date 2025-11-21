@@ -604,6 +604,7 @@
   flex-direction: column;
   gap: 1.25rem;
   box-shadow: var(--shadow);
+  margin-top: 10px;
 }
 
 .about-hero__panel-header {
