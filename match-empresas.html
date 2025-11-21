@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Metadados essenciais da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título exibido na aba do navegador -->
     <title>TechMatch • Match Empresas</title>
+
+    <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
+<!-- Atributos definem que o acesso exige autenticação e papel específico -->
 <body data-require-auth="true" data-required-role="company" class="page-match-company">
+
+    <!-- ========================= HEADER ========================= -->
     <header class="main-header">
         <div class="layout-grid">
+
+            <!-- Marca / Logo que leva para a Home -->
             <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
                 <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo TechMatch">
                 <div class="brand-mark__text">
                     <span>techmatch</span>
                 </div>
             </a>
+
+            <!-- Botão do menu mobile -->
             <button class="menu-toggle" type="button" aria-expanded="false">
                 <span class="menu-toggle__icon" aria-hidden="true">
                     <span></span>
@@ -23,26 +36,38 @@
                 </span>
                 <span class="menu-toggle__label">Menu</span>
             </button>
+
+            <!-- Navegação principal do site -->
             <nav class="main-nav" aria-label="Menu principal">
                 <a href="index.html">Início</a>
                 <a href="quemsomos.html">Integrantes</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contato.html">Contato</a>
+
+                <!-- Links protegidos por papel (role-guard) -->
                 <a href="match.html" data-nav-match data-role-guard="candidate">
                     Match para candidatas
                     <small>Painel principal</small>
                 </a>
+
+                <!-- Link da página atual -->
                 <a href="match-empresas.html" class="is-active" data-nav-match data-role-guard="company">
                     Match para empresas
                     <small>Painel dedicado</small>
                 </a>
             </nav>
+
+            <!-- Controles visuais do cabeçalho -->
             <div class="header-controls">
+                
+                <!-- Botão tema claro/escuro -->
                 <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
                     <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
                     <span class="theme-toggle__label">Modo escuro</span>
                 </button>
+
+                <!-- Área de autenticação / login / logout -->
                 <div class="auth-controls">
                     <span class="user-pill" data-user-badge hidden></span>
                     <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
@@ -51,24 +76,32 @@
             </div>
         </div>
     </header>
+    <!-- ======================= FIM HEADER ======================== -->
+
+
 
     <main>
+
+        <!-- ========================= HERO ========================= -->
         <section class="hero">
             <div class="layout-grid hero-content">
                 <div>
+                    <!-- Título + descrição da seção -->
                     <p class="eyebrow">painel para recrutadoras</p>
                     <h1>Cadastre a vaga uma única vez e entregue comparativos claros para cada candidata.</h1>
                     <p>O Match Empresas transforma a descrição da oportunidade em cartões objetivos, prontos para serem
-                        enviados às profissionais que você está avaliando. A partir deles, o painel do TechMatch mostra
-                        exatamente o que está aderente ou não ao cargo.</p>
-                    <p>Compartilhe o link com o time de talentos, acompanhe as respostas e mantenha a comunicação alinhada
-                        com as métricas apresentadas no Match para candidatas.</p>
+                        enviados às profissionais que você está avaliando...</p>
+
+                    <p>Compartilhe o link com o time de talentos...</p>
+
+                    <!-- Botão principal da seção -->
                     <div class="hero-actions">
                         <a class="button button-primary" href="contato.html">Falar com o time</a>
                     </div>
                 </div>
+
+                <!-- Banner lateral de destaques -->
                 <div class="hero-visual hero-visual--summary">
-                    
                     <div class="hero-visual__panel">
                         <p class="eyebrow">para recrutadoras</p>
                         <ul class="hero-visual__list">
@@ -80,37 +113,54 @@
                 </div>
             </div>
         </section>
+        <!-- ======================= FIM HERO ======================== -->
 
+
+
+        <!-- ==================== FORMULÁRIO DA VAGA ==================== -->
         <section class="section">
             <div class="layout-grid profile-panel">
+
+                <!-- Painel explicativo do lado esquerdo -->
                 <article class="info-card profile-card">
                     <header class="section-header">
                         <p class="eyebrow">painel da vaga</p>
-                        <h3>Descreva quem você busca e deixe o TechMatch guiar o processo.</h3>
-                        <p>Centralize o contexto do cargo, os requisitos não negociáveis e os diferenciais desejados. Assim
-                            que a vaga é publicada, o sistema gera automaticamente o comparativo que as candidatas
-                            visualizarão.</p>
+                        <h3>Descreva quem você busca...</h3>
+                        <p>Centralize o contexto do cargo...</p>
                     </header>
+
+                    <!-- Resumo dos campos necessários -->
                     <ul class="profile-summary__meta">
                         <li><span>Campos obrigatórios</span><strong>Empresa, cargo, senioridade</strong></li>
                         <li><span>Campos recomendados</span><strong>Stack, entregáveis e indicadores</strong></li>
                         <li><span>Compartilhamento</span><strong>Link seguro por e-mail</strong></li>
                     </ul>
                 </article>
+
+                <!-- Painel com formulário real -->
                 <div class="profile-manager">
-                    <form class="form-card form-grid profile-form" aria-describedby="vaga-form-instructions" data-job-form>
+
+                    <!-- Formulário principal de cadastro da vaga -->
+                    <form class="form-card form-grid profile-form"
+                          aria-describedby="vaga-form-instructions"
+                          data-job-form>
+
                         <h4>Informações essenciais da vaga</h4>
-                        <p id="vaga-form-instructions">Modelo de referência para o seu time de recrutamento.</p>
+                        <p id="vaga-form-instructions">Modelo de referência...</p>
+
+                        <!-- Campos da vaga -->
                         <div>
-                            <label for="company-name">Empresa <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
-                            <input type="text" id="company-name" name="company-name" placeholder="ex.: TechMatch" required>
+                            <label for="company-name">Empresa *</label>
+                            <input type="text" id="company-name" name="company-name" required>
                         </div>
+
                         <div>
-                            <label for="role-title">Cargo <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
-                            <input type="text" id="role-title" name="role-title" placeholder="ex.: Engenheira de Dados Sr." required>
+                            <label for="role-title">Cargo *</label>
+                            <input type="text" id="role-title" name="role-title" required>
                         </div>
+
                         <div>
-                            <label for="role-seniority">Senioridade alvo <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
+                            <label for="role-seniority">Senioridade alvo *</label>
                             <select id="role-seniority" name="role-seniority" required>
                                 <option value="">Selecione</option>
                                 <option value="estagio">Estagiário(a)</option>
@@ -120,82 +170,116 @@
                                 <option value="lider">Liderança</option>
                             </select>
                         </div>
+
+                        <!-- Lista dinâmica de habilidades -->
                         <div class="form-grid__full">
-                            <label for="job-required-skills">Habilidades necessárias <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
-                            <p class="field-hint">Escolha somente as habilidades abaixo. As candidatas só verão a vaga
-                                quando tiverem pelo menos uma delas.</p>
+                            <label for="job-required-skills">Habilidades necessárias *</label>
+                            <p class="field-hint">Escolha somente as habilidades abaixo...</p>
                             <div class="skill-selector" id="job-required-skills" data-job-skill-options>
                                 <p>As opções ficam disponíveis após o login.</p>
                             </div>
                         </div>
+
+                        <!-- Requisitos e diferenciais -->
                         <div class="form-grid__full">
-                            <label for="core-requirements">Requisitos obrigatórios <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
-                            <textarea id="core-requirements" name="core-requirements" rows="3"
-                                placeholder="Liste entregas, ferramentas ou rituais críticos para esta vaga" required></textarea>
+                            <label for="core-requirements">Requisitos obrigatórios *</label>
+                            <textarea id="core-requirements" name="core-requirements" rows="3" required></textarea>
                         </div>
+
                         <div>
-                            <label for="nice-to-have">Diferenciais <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
-                            <textarea id="nice-to-have" name="nice-to-have" rows="3"
-                                placeholder="Compartilhe diferenciais que contam pontos" required></textarea>
+                            <label for="nice-to-have">Diferenciais *</label>
+                            <textarea id="nice-to-have" name="nice-to-have" rows="3" required></textarea>
                         </div>
+
+                        <!-- Imagem da vaga -->
                         <div>
-                            <label for="role-image">Imagem destaque (URL) <span class="required-marker" aria-hidden="true">*</span><span class="sr-only"> (campo obrigatório)</span></label>
-                            <input type="url" id="role-image" name="role-image" placeholder="https://exemplo.com/imagem.png" required>
+                            <label for="role-image">Imagem destaque (URL) *</label>
+                            <input type="url" id="role-image" name="role-image" required>
                         </div>
+
+                        <!-- Botão de envio -->
                         <button class="button button-primary" type="submit">Salvar e enviar para candidatas</button>
+
+                        <!-- Feedback de validação -->
                         <p class="form-feedback" data-job-feedback aria-live="polite"></p>
+
                     </form>
+
+                    <!-- Checklist lateral -->
                     <div class="form-card profile-interests">
                         <h4>Checklist rápido</h4>
                         <p>Antes de enviar para as candidatas, confirme se:</p>
+
                         <ul class="profile-interests__list">
                             <li>Os critérios estão em linguagem simples.</li>
                             <li>Há exemplos concretos de entregas esperadas.</li>
-                            <li>Os dados de contato da pessoa recrutadora estão atualizados.</li>
+                            <li>Os dados de contato estão atualizados.</li>
                         </ul>
+
                         <a class="button button-ghost button-compact" href="contato.html">Solicitar apoio</a>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- ================= FIM FORMULÁRIO DA VAGA ================== -->
 
+
+
+        <!-- ==================== DASHBOARD DE VAGAS ==================== -->
         <section class="section section-alt">
             <div class="layout-grid job-dashboard">
+
+                <!-- Coluna com listagem das vagas -->
                 <article class="info-card job-dashboard__column">
                     <header class="section-header">
                         <p class="eyebrow">minhas vagas</p>
                         <h3>Controle as oportunidades publicadas.</h3>
-                        <p class="job-dashboard__summary-pill" data-company-job-summary>Cadastre uma vaga e acompanhe o status por aqui.</p>
+                        <p class="job-dashboard__summary-pill" data-company-job-summary>
+                            Cadastre uma vaga e acompanhe o status por aqui.
+                        </p>
                     </header>
+
+                    <!-- Lista dinâmica preenchida pelo JS -->
                     <ul class="job-dashboard__list" data-company-job-list>
                         <li>Ainda não há vagas cadastradas.</li>
                     </ul>
                 </article>
+
+                <!-- Coluna com candidatas interessadas -->
                 <article class="info-card job-dashboard__column">
                     <header class="section-header">
                         <p class="eyebrow">inscrições</p>
                         <h3>Candidatas interessadas</h3>
                         <p>Selecione uma vaga para enxergar quem favoritou a oportunidade.</p>
                     </header>
+
+                    <!-- Conteúdo dinâmico preenchido via JS -->
                     <div class="job-dashboard__detail" data-company-applicants>
                         <p>Você ainda não selecionou nenhuma vaga.</p>
                     </div>
                 </article>
+
             </div>
         </section>
+        <!-- ================= FIM DASHBOARD DE VAGAS ================== -->
+
     </main>
 
 
+
+    <!-- ========================== FOOTER ========================== -->
     <footer class="site-footer">
         <div class="layout-grid footer-grid">
+
             <div class="footer-brand">
                 <span class="footer-brand__tag">ENTREGA</span>
                 <div class="footer-brand__content">
                     <span class="footer-eyebrow">FIAP • FRONT-END DESIGN ENGINEERING</span>
                     <h3>TechMatch</h3>
-                    <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
+                    <p>Projeto acadêmico com foco em responsividade...</p>
                 </div>
             </div>
+
             <div class="footer-info">
                 <h4>Contato do grupo</h4>
                 <ul class="footer-list footer-list--contacts">
@@ -206,72 +290,103 @@
                 <p class="footer-note">Repositório e README atualizados no GitHub.</p>
             </div>
         </div>
+
         <div class="footer-meta">
             <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
         </div>
     </footer>
+    <!-- ======================== FIM FOOTER ======================== -->
 
+
+
+    <!-- Scripts principais da aplicação -->
     <script src="assets/js/theme-toggle.js" defer></script>
     <script src="assets/js/auth.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 
+
+    <!-- =============== OVERLAY DE AUTENTICAÇÃO =============== -->
     <div class="auth-overlay" data-auth-overlay hidden>
+
         <div class="auth-overlay__panel">
+
+            <!-- Parte textual do overlay -->
             <div class="auth-overlay__intro">
                 <p class="eyebrow">acesso obrigatório</p>
-                <h2>Autentique-se para publicar vagas no Match Empresas.</h2>
-                <p>Garantimos que apenas pessoas autorizadas consigam editar briefings e acompanhar candidatas conectadas ao seu painel.</p>
+                <h2>Autentique-se para publicar vagas...</h2>
+                <p>Garantimos que apenas pessoas autorizadas...</p>
+
+                <!-- Lista de benefícios -->
                 <ul class="auth-overlay__highlights">
                     <li>
                         <strong>Equipe alinhada</strong>
-                        <span>Compartilhe o mesmo usuário com o time de Talent Acquisition.</span>
+                        <span>Compartilhe o mesmo usuário...</span>
                     </li>
                     <li>
                         <strong>Vagas confiáveis</strong>
-                        <span>Os requisitos e diferenciais ficam protegidos contra alterações acidentais.</span>
+                        <span>Proteção contra alterações.</span>
                     </li>
                     <li>
                         <strong>Roadmaps claros</strong>
-                        <span>As candidatas recebem contexto completo antes de aceitarem o match.</span>
+                        <span>Contexto completo para candidatas.</span>
                     </li>
                 </ul>
+
+                <!-- Ações para o usuário -->
                 <div class="auth-overlay__actions">
                     <a class="button button-ghost button-small" href="index.html">Voltar para a página inicial</a>
                     <a class="button button-ghost button-small" href="contato.html">Solicitar suporte</a>
                 </div>
             </div>
+
+            <!-- Formulário inline de login/register -->
             <div class="inline-auth-panels">
+
+                <!-- Formulário de login corporativo -->
                 <form class="form-card form-grid" data-login-form>
                     <h3>Entrar</h3>
-                    <p class="form-hint">Use o usuário corporativo cadastrado anteriormente.</p>
+                    <p class="form-hint">Use o usuário corporativo...</p>
+
                     <div>
                         <label for="inline-login-username">Usuário</label>
-                        <input type="text" id="inline-login-username" name="login-username" placeholder="ex.: recrutadora.tech" required>
+                        <input type="text" id="inline-login-username" name="login-username" required>
                     </div>
+
                     <div>
                         <label for="inline-login-password">Senha</label>
-                        <input type="password" id="inline-login-password" name="login-password" placeholder="••••••" required>
+                        <input type="password" id="inline-login-password" name="login-password" required>
                     </div>
+
                     <button class="button button-primary" type="submit">Entrar</button>
                     <p class="form-feedback" data-login-feedback></p>
                 </form>
+
+                <!-- Formulário de cadastro corporativo -->
                 <form class="form-card form-grid" data-register-form>
                     <h3>Registrar</h3>
-                    <p class="form-hint">Crie o acesso da empresa para liberar o painel corporativo.</p>
+                    <p class="form-hint">Crie o acesso da empresa...</p>
+
                     <div>
                         <label for="inline-register-username">Crie um usuário</label>
-                        <input type="text" id="inline-register-username" name="register-username" placeholder="ex.: nova.empresa" required>
+                        <input type="text" id="inline-register-username" name="register-username" required>
                     </div>
+
                     <div>
                         <label for="inline-register-password">Crie uma senha</label>
-                        <input type="password" id="inline-register-password" name="register-password" placeholder="mínimo 6 caracteres" required>
+                        <input type="password" id="inline-register-password" name="register-password" required>
                     </div>
+
+                    <!-- Define automaticamente que é uma conta de empresa -->
                     <input type="hidden" name="register-role" value="company">
+
                     <button class="button button-primary" type="submit">Criar conta</button>
                     <p class="form-feedback" data-register-feedback></p>
                 </form>
+
             </div>
         </div>
     </div>
+    <!-- ============ FIM OVERLAY DE AUTENTICAÇÃO ============ -->
+
 </body>
 </html>
