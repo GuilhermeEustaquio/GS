@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMatch • Sobre</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="layout-grid">
+            <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
+                <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo TechMatch">
+                <div class="brand-mark__text">
+                    <span>techmatch</span>
+                </div>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false">
+                <span class="menu-toggle__icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-toggle__label">Menu</span>
+            </button>
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+                <a href="quemsomos.html">Integrantes</a>
+                <a href="sobre.html" class="is-active">Sobre</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+                <a href="match.html" data-nav-match data-role-guard="candidate">
+                    Match para candidatas
+                    <small>Painel principal</small>
+                </a>
+                <a href="match-empresas.html" data-nav-match data-role-guard="company">
+                    Match para empresas
+                    <small>Painel dedicado</small>
+                </a>
+            </nav>
+            <div class="header-controls">
+                <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+                    <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+                    <span class="theme-toggle__label">Modo escuro</span>
+                </button>
+                <div class="auth-controls">
+                    <span class="user-pill" data-user-badge hidden></span>
+                    <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
+                    <button class="button button-ghost button-small" type="button" data-logout hidden>Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--about">
+            <div class="layout-grid about-hero">
+                <div class="about-hero__intro">
+                    <p class="eyebrow">sobre o projeto</p>
+                    <h1>O TechMatch nasceu para enfrentar o desafio global da requalificação.</h1>
+                    <p class="hero-lead">Automação e inteligência artificial estão redesenhando cargos em poucos meses. A plataforma traduz esse movimento em orientações simples.</p>
+                    <div class="about-hero__badges">
+                        <div class="hero-pill">
+                            <h3>Dados reais</h3>
+                            <p>Fórum Econômico Mundial, OIT e feedback das empresas parceiras.</p>
+                        </div>
+                        <div class="hero-pill">
+                            <h3>Experiência guiada</h3>
+                            <p>Comparar, analisar e agir em um único painel.</p>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="match.html">Ir para o match</a>
+                        <a class="button button-ghost" href="#fluxo">Ver etapas</a>
+                    </div>
+                </div>
+                <div class="about-hero__panel">
+                    <div class="about-hero__panel-header">
+                        <span class="panel-chip">decisões rápidas</span>
+                        <p>Removemos mockups genéricos para focar no conteúdo relevante.</p>
+                    </div>
+                    <ul class="panel-list">
+                        <li>
+                            <span>Diagnóstico das vagas em linguagem simples.</span>
+                            <strong>1</strong>
+                        </li>
+                        <li>
+                            <span>Comparativo entre requisitos e habilidades.</span>
+                            <strong>2</strong>
+                        </li>
+                        <li>
+                            <span>Recomendações objetivas para agir.</span>
+                            <strong>3</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt about-panorama">
+            <div class="layout-grid">
+                <header class="section-header">
+                    <p class="eyebrow">descrição detalhada</p>
+                    <h2>Do diagnóstico do mercado à solução proposta.</h2>
+                    <p class="section-lead">Três frentes guiam o projeto e deixam claro onde agir primeiro.</p>
+                </header>
+                <div class="panorama-grid">
+                    <article class="panorama-card">
+                        <div class="panorama-card__icon" aria-hidden="true">🌍</div>
+                        <div>
+                            <h3>Pressão global</h3>
+                            <p>Automação e IA aceleram mudanças em cargos até 2027, exigindo novas competências em tempo recorde.</p>
+                        </div>
+                        <span class="tag-chip">Fórum Econômico Mundial</span>
+                    </article>
+                    <article class="panorama-card">
+                        <div class="panorama-card__icon" aria-hidden="true">⚖️</div>
+                        <div>
+                            <h3>Abismo de habilidades</h3>
+                            <p>Mesmo com conteúdo abundante, poucas pessoas sabem quais requisitos priorizar para cada vaga.</p>
+                        </div>
+                        <span class="tag-chip">Pesquisa com candidatas</span>
+                    </article>
+                    <article class="panorama-card">
+                        <div class="panorama-card__icon" aria-hidden="true">🚀</div>
+                        <div>
+                            <h3>Resposta TechMatch</h3>
+                            <p>Comparar requisito por requisito, evidenciar lacunas e sugerir trilhas de estudo objetivas.</p>
+                        </div>
+                        <span class="tag-chip">Comparar • Analisar • Agir</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="fluxo">
+            <div class="layout-grid">
+                <header class="section-header">
+                    <p class="eyebrow">etapas</p>
+                    <h2>Como estruturamos a plataforma.</h2>
+                    <p class="section-lead">O processo combina pesquisa, curadoria de requisitos reais e prototipação contínua.</p>
+                </header>
+                <div class="process-board">
+                    <article class="process-card">
+                        <div class="process-card__badge">1</div>
+                        <h3>1. Descoberta</h3>
+                        <p>Levantamos dados do Fórum Econômico Mundial e da OIT sobre habilidades urgentes.</p>
+                    </article>
+                    <article class="process-card">
+                        <div class="process-card__badge">2</div>
+                        <h3>2. Estratégia</h3>
+                        <p>Definimos indicadores e a forma de comunicar os resultados com clareza.</p>
+                    </article>
+                    <article class="process-card">
+                        <div class="process-card__badge">3</div>
+                        <h3>3. Implementação</h3>
+                        <p>Construímos o painel de match, autenticação e registro de requisitos.</p>
+                    </article>
+                    <article class="process-card">
+                        <div class="process-card__badge">4</div>
+                        <h3>4. TechMatch</h3>
+                        <p>Comparar, analisar e agir com base nas trilhas personalizadas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-highlight info-handoff">
+            <div class="layout-grid info-grid">
+                <article class="info-panel">
+                    <div class="info-panel__header">
+                        <p class="eyebrow">principais recursos</p>
+                        <h3>Recursos essenciais</h3>
+                    </div>
+                    <ul class="info-panel__list">
+                        <li>Cadastro de vagas com cargo e requisitos prioritários.</li>
+                        <li>Registro rápido das habilidades de cada candidata.</li>
+                        <li>Evidência das lacunas e trilhas sugeridas.</li>
+                        <li>Favoritos e histórico salvos no navegador.</li>
+                    </ul>
+                </article>
+                <article class="info-panel">
+                    <div class="info-panel__header">
+                        <p class="eyebrow">pronto para evoluir</p>
+                        <h3>Documentação viva</h3>
+                    </div>
+                    <p>Processos, contatos e responsabilidades estão registrados para que escolas e empresas possam replicar a metodologia.</p>
+                    <a class="button button-primary" href="contato.html">Falar com o time</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="layout-grid footer-grid">
+            <div class="footer-brand">
+                <span class="footer-brand__tag">ENTREGA</span>
+                <div class="footer-brand__content">
+                    <span class="footer-eyebrow">FIAP • FRONT-END DESIGN ENGINEERING</span>
+                    <h3>TechMatch</h3>
+                    <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <h4>Contato do grupo</h4>
+                <ul class="footer-list footer-list--contacts">
+                    <li><a href="mailto:guilhermepeustaquio@gmail.com">guilhermepeustaquio@gmail.com</a></li>
+                    <li><a href="mailto:caiocc2006@gmail.com">caiocc2006@gmail.com</a></li>
+                    <li><a href="mailto:matheustavares1356@gmail.com">matheustavares1356@gmail.com</a></li>
+                </ul>
+                <p class="footer-note">Repositório e README atualizados no GitHub.</p>
+            </div>
+        </div>
+        <div class="footer-meta">
+            <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
+        </div>
+    </footer>
+    <script src="assets/js/theme-toggle.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
