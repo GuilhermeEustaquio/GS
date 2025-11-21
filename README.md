@@ -1,12 +1,13 @@
 # 💻 TechMatch – Match entre candidatas e vagas
-
-Link do Projeto no GITHUB
-
-https://github.com/GuilhermeEustaquio/GS
-
 Interface front-end que compara requisitos reais de empresas com as habilidades já cadastradas por candidatas. O objetivo é evidenciar rapidamente o que está pronto, quais lacunas existem e quais trilhas seguir para chegar com confiança à próxima vaga.
 
+
+## 🔗 Link do Projeto
+Acesse o projeto no GitHub:  
+[🌐 Acessar Projeto](https://github.com/guilhermeeustaquio/GS)
+
 ---
+
 
 ## 📌 Visão Geral
 - **Públicos atendidos:** candidatas em transição de carreira e empresas que descrevem cargos e requisitos prioritários.
@@ -20,18 +21,21 @@ Interface front-end que compara requisitos reais de empresas com as habilidades 
 - `login.html`: fluxo de autenticação e acesso aos painéis.
 - `sobre.html`, `faq.html`, `contato.html`, `quemsomos.html`: contexto do projeto, dúvidas frequentes, contato e time.
 
-## 🛠️ Tecnologias
-- HTML e CSS para marcação e estilos.
-- JavaScript vanila para interações, tema claro/escuro e simulações de login.
-- Ícones e badges criados em SVG para a identidade TechMatch.
+## ⚡ Tecnologias Utilizadas na parte de Front-End
+- HTML e CSS  
+- Git e GitHub
+- JavaScript
 
+---
 
 ## 👥 Equipe
+
 | Nome | RM | GitHub | LinkedIn |
 |------|----|--------|----------|
-| **Guilherme Eustaquio** | 566784 | [guilhermeeustaquio](https://github.com/guilhermeeustaquio) | [guilherme-eustaquio](https://www.linkedin.com/in/guilherme-eustaquio/) |
-| **Caio Couto** | 563452 | [caioccouto](https://github.com/caioccouto) | [caio-couto-44b849326](https://www.linkedin.com/in/caio-couto-44b849326) |
-| **Matheus Tavares** | 566844 | [manovares](https://github.com/manovares) | [matheus-tavares-7279032aa](https://www.linkedin.com/in/matheus-tavares-7279032aa) |
+| **Guilherme Eustaquio** | 566784 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/guilhermeeustaquio) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/guilhermeeustaquio) |
+| **Caio Couto** | 563452 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/caioccouto) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caio-couto-44b849326) |
+| **Matheus Tavares** | 566844 | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manovares) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manovares/) |
+
 
 ---
 
