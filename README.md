@@ -20,24 +20,11 @@ Interface front-end que compara requisitos reais de empresas com as habilidades 
 - `login.html`: fluxo de autenticação e acesso aos painéis.
 - `sobre.html`, `faq.html`, `contato.html`, `quemsomos.html`: contexto do projeto, dúvidas frequentes, contato e time.
 
-## 🗂️ Estrutura do projeto
-```
-assets/
-├── css/           # Estilos globais e utilitários
-├── images/        # Identidade visual e fotos do time
-└── js/            # Scripts de navegação, tema e autenticação
-*.html             # Páginas estáticas do protótipo
-```
-
 ## 🛠️ Tecnologias
-- HTML5 e CSS3 para marcação e estilos.
+- HTML e CSS para marcação e estilos.
 - JavaScript vanila para interações, tema claro/escuro e simulações de login.
 - Ícones e badges criados em SVG para a identidade TechMatch.
 
-## ▶️ Como executar localmente
-1. Clone o repositório: `git clone https://github.com/guilhermeeustaquio/Challenge.git`.
-2. Abra `index.html` no navegador **ou** sirva o diretório com um servidor simples (ex.: `python -m http.server 8000`).
-3. Navegue pelos painéis de candidata e empresa para testar o fluxo de match e as trilhas sugeridas.
 
 ## 👥 Equipe
 | Nome | RM | GitHub | LinkedIn |
@@ -48,4 +35,4 @@ assets/
 
 ---
 
-Contribuições são bem-vindas para aprimorar os fluxos de match, as trilhas e a experiência geral da plataforma.
+Repositório Criado para avaliação do Projeto
