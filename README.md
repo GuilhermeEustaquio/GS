@@ -6,6 +6,18 @@ Interface front-end que compara requisitos reais de empresas com as habilidades 
 Acesse o projeto no GitHub:  
 [🌐 Acessar Projeto](https://github.com/guilhermeeustaquio/GS)
 
+
+
+## 🧪 Logins para Teste
+
+### 👤 Conta de Candidato  
+- **Usuário:** `Eustaquio`  
+- **Senha:** `eustaquio2005`
+
+### 🏢 Conta de Empresa  
+- **Usuário:** `techmatch`  
+- **Senha:** `123456`
+
 ---
 
 
