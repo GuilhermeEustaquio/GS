@@ -4,6 +4,10 @@
     text-align: center;
   }
 
+  .skill-selector {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+
   .hero-content > * {
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +31,10 @@
   .job-dashboard,
   .match-stage {
     gap: 1.25rem;
+  }
+
+  .skill-selector {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
   }
 
   .profile-manager,
@@ -78,6 +86,10 @@
   .layout-grid {
     padding-left: clamp(0.9rem, 5vw, 1.25rem);
     padding-right: clamp(0.9rem, 5vw, 1.25rem);
+  }
+
+  .skill-selector {
+    grid-template-columns: 1fr;
   }
 
   .info-card,
