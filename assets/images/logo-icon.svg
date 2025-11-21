@@ -1,0 +1,6 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Tech Match">
+  <rect width="256" height="256" rx="48" fill="#0A5DB8"/>
+  <rect x="52" y="60" width="152" height="32" fill="#ffffff"/>
+  <rect x="110" y="92" width="36" height="108" fill="#ffffff"/>
+  <path d="M150 92h34l20 38 20-38h34v108h-36v-52l-18 34-18-34v52h-36V92z" fill="#ffffff"/>
+</svg>
