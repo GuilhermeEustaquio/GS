@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configuração básica da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba -->
     <title>TechMatch • Interface de Match</title>
+
+    <!-- Estilos globais do projeto -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
+<!-- Atributos controlam autenticação e papel do usuário -->
 <body data-require-auth="true" data-required-role="candidate" class="page-match-candidate">
+
+    <!-- ========================= HEADER ========================= -->
     <header class="main-header">
         <div class="layout-grid">
+
+            <!-- Marca/Logo com link para a home -->
             <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
                 <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo TechMatch">
                 <div class="brand-mark__text">
                     <span>techmatch</span>
                 </div>
             </a>
+
+            <!-- Botão mobile do menu -->
             <button class="menu-toggle" type="button" aria-expanded="false">
                 <span class="menu-toggle__icon" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </span>
                 <span class="menu-toggle__label">Menu</span>
             </button>
+
+            <!-- Navegação superior -->
             <nav class="main-nav" aria-label="Menu principal">
                 <a href="index.html">Início</a>
                 <a href="quemsomos.html">Integrantes</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contato.html">Contato</a>
+
+                <!-- Painel atual da candidata -->
                 <a href="match.html" class="is-active" data-nav-match data-role-guard="candidate">
                     Match para candidatas
                     <small>Painel principal</small>
                 </a>
+
+                <!-- Painel corporativo -->
                 <a href="match-empresas.html" data-nav-match data-role-guard="company">
                     Match para empresas
                     <small>Painel dedicado</small>
                 </a>
             </nav>
+
+            <!-- Controles gerais (tema + login/logout) -->
             <div class="header-controls">
+
+                <!-- Alternância de tema -->
                 <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
                     <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
                     <span class="theme-toggle__label">Modo escuro</span>
                 </button>
+
+                <!-- Área de autenticação -->
                 <div class="auth-controls">
                     <span class="user-pill" data-user-badge hidden></span>
                     <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
@@ -51,17 +74,24 @@
             </div>
         </div>
     </header>
+    <!-- ======================= FIM HEADER ======================== -->
+
+
 
     <main>
+
+        <!-- ========================= HERO ========================= -->
         <section class="hero">
             <div class="layout-grid hero-content">
+
+                <!-- Texto principal do painel de match -->
                 <div>
                     <p class="eyebrow">comparação entre requisitos e habilidades</p>
                     <h1>Descubra, em tempo real, o quanto o seu perfil conversa com a vaga desejada.</h1>
-                    <p>Os cards abaixo representam requisitos que a empresa enviou para você. Use os controles para dizer se
-                        já domina cada habilidade e monitore instantaneamente o quanto está pronta para disputar a vaga.
-                        Precisa publicar uma nova oportunidade? Encaminhe o time recrutador para o Match Empresas.</p>
+                    <p>Os cards abaixo representam requisitos que a empresa enviou...</p>
                 </div>
+
+                <!-- Painel lateral com pontos-chave -->
                 <div class="hero-visual hero-visual--summary">
                     <div class="hero-visual__panel">
                         <p class="eyebrow">painel simplificado</p>
@@ -71,87 +101,126 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
+        <!-- ======================= FIM HERO ======================== -->
 
+
+
+        <!-- ==================== PERFIL DA CANDIDATA ==================== -->
         <section class="section">
             <div class="layout-grid profile-panel">
+
+                <!-- Card com informações gerais do perfil -->
                 <article class="info-card profile-card">
                     <header class="section-header">
                         <p class="eyebrow">perfil da candidata</p>
                         <h3>Centralize objetivos, resumo profissional e interesses.</h3>
-                        <p>Mantenha o TechMatch atualizado com o seu momento e receba trilhas de estudo aderentes às lacunas que o mercado
-                            aponta.</p>
+                        <p>Mantenha o TechMatch atualizado com o seu momento...</p>
                     </header>
+
+                    <!-- Resumo carregado via JS -->
                     <div class="profile-summary" data-profile-summary>
                         <p>Faça login para visualizar e personalizar seu perfil.</p>
                     </div>
                 </article>
+
+                <!-- Formulário para atualizar informações do perfil -->
                 <div class="profile-manager">
                     <form class="form-card form-grid profile-form" data-profile-form>
                         <h4>Atualize seu momento profissional</h4>
+
+                        <!-- Campo objetivo -->
                         <div>
                             <label for="profile-headline">Objetivo imediato</label>
-                            <input type="text" id="profile-headline" name="profile-headline" maxlength="120"
-                                placeholder="ex.: Migrar para desenvolvimento de IA aplicada" required>
+                            <input type="text" id="profile-headline" name="profile-headline"
+                                maxlength="120" placeholder="ex.: Migrar para IA aplicada" required>
                         </div>
+
+                        <!-- Campo resumo -->
                         <div>
                             <label for="profile-bio">Resumo sobre você</label>
-                            <textarea id="profile-bio" name="profile-bio" rows="3" maxlength="280"
-                                placeholder="Conte em poucas linhas o que está estudando e quais entregas possui."></textarea>
+                            <textarea id="profile-bio" name="profile-bio" rows="3"
+                                maxlength="280" placeholder="Conte em poucas linhas..."></textarea>
                         </div>
+
+                        <!-- Botão de envio -->
                         <button class="button button-primary" type="submit">Salvar perfil</button>
                         <p class="form-feedback" data-profile-feedback></p>
                     </form>
                 </div>
+
+                <!-- Card de habilidades -->
                 <div class="form-card profile-skills">
                     <h4>Habilidades disponíveis</h4>
-                    <p>Selecione apenas as habilidades da lista que você domina. As vagas só aparecem quando houver
-                        ao menos uma compatibilidade.</p>
+                    <p>Selecione apenas as habilidades...</p>
+
                     <form class="skill-form" data-skill-form>
+                        <!-- Lista dinâmica carregada via JS -->
                         <div class="skill-selector" data-skill-options>
                             <p>A lista de habilidades carregará após o login.</p>
                         </div>
+
                         <button class="button button-ghost button-compact" type="submit">Salvar habilidades</button>
                         <p class="form-feedback" data-skill-feedback></p>
                     </form>
                 </div>
+
             </div>
         </section>
+        <!-- ================= FIM PERFIL DA CANDIDATA ================== -->
 
+
+
+        <!-- ========================= ÁREA DE MATCH ========================= -->
         <section class="section">
             <div class="layout-grid match-stage">
+
+                <!-- Card interativo estilo "swipe" -->
                 <div class="swipe-card-wrapper">
                     <article class="swipe-card" data-swipe-card>
+
+                        <!-- Imagem da área da vaga -->
                         <div class="image-placeholder" data-swipe-card-image aria-hidden="true">área</div>
+
+                        <!-- Conteúdo textual do requisito -->
                         <div class="swipe-card-body">
                             <p class="eyebrow" data-swipe-card-company>Empresa</p>
                             <h2 data-swipe-card-title>Área</h2>
                             <p class="swipe-card__meta" data-swipe-card-meta>Detalhes da vaga</p>
                             <p data-swipe-card-description>Descrição</p>
+
+                            <!-- Lista de habilidades da vaga -->
                             <ul class="tag-list" data-swipe-card-skills hidden>
                                 <li>Stack</li>
                             </ul>
+
                             <p class="swipe-card__note" data-swipe-card-note></p>
                         </div>
                     </article>
+
+                    <!-- Botões de interação (favoritar / ignorar) -->
                     <div class="swipe-controls" role="group" aria-label="Controles do match">
                         <button class="swipe-control swipe-control--skip" type="button" data-action="skip">
-                            <span class="swipe-control__icon" aria-hidden="true">&#10006;</span>
+                            <span class="swipe-control__icon">&#10006;</span>
                             <span>Ignorar</span>
                         </button>
+
                         <button class="swipe-control swipe-control--favorite" type="button" data-action="favorite">
-                            <span class="swipe-control__icon" aria-hidden="true">&#10003;</span>
+                            <span class="swipe-control__icon">&#10003;</span>
                             <span>Favoritar</span>
                         </button>
                     </div>
                 </div>
+
+                <!-- Painel lateral com instruções -->
                 <div>
                     <div class="info-card match-guidance">
                         <h3>Como usar</h3>
-                        <p>Para cada requisito listado, clique em Ignorar se ele não faz sentido para você ou em Favoritar caso
-                            já possua a habilidade. O TechMatch registra automaticamente se há match total, parcial ou se é
-                            preciso desenvolver algo novo.</p>
+                        <p>Para cada requisito listado...</p>
+
+                        <!-- Indicadores -->
                         <div class="match-metrics">
                             <div>
                                 <span>Etapa atual</span>
@@ -163,51 +232,71 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Lista de favoritos do usuário -->
                     <div class="info-card" style="margin-top:1.5rem;">
                         <h3>Habilidades atendidas</h3>
-                        <p>Cada usuário logado tem uma lista própria com os requisitos já contemplados. Utilize os controles do
-                            painel para adicionar itens aqui.</p>
+                        <p>Cada usuário logado possui sua própria lista...</p>
+
                         <ul class="match-feed" data-favorites-feed>
                             <li>Ainda não há favoritos. Clique em Favoritar para salvar.</li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
+        <!-- ========================= FIM ÁREA DE MATCH ========================= -->
 
+
+
+        <!-- ========================= GERENCIAMENTO DE INTERESSES ========================= -->
         <section class="section section-alt">
             <div class="layout-grid interest-panel" aria-live="polite">
+
                 <div class="info-card interest-panel__wrapper">
                     <header class="section-header">
                         <p class="eyebrow">requisitos analisados</p>
                         <h3>Gerencie o que já atende e o que precisa evoluir.</h3>
-                        <p>Escolha um requisito favoritado para visualizar contexto, tags e remover quando desejar.</p>
+                        <p>Escolha um requisito favoritado...</p>
                     </header>
+
                     <div class="interest-panel__grid">
+
+                        <!-- Lista de áreas favoritedas -->
                         <ul class="interest-list" data-interest-list>
                             <li>Ainda não há áreas salvas para gerenciar.</li>
                         </ul>
+
+                        <!-- Painel que mostra detalhes do item clicado -->
                         <article class="interest-detail" data-interest-detail>
                             <p>Selecione uma área na lista para ver o resumo completo.</p>
                         </article>
+
                     </div>
                 </div>
+
             </div>
         </section>
+        <!-- ========================= FIM GERENCIAMENTO ========================= -->
 
     </main>
 
 
+
+    <!-- ========================= FOOTER ========================= -->
     <footer class="site-footer">
         <div class="layout-grid footer-grid">
+
             <div class="footer-brand">
                 <span class="footer-brand__tag">ENTREGA</span>
                 <div class="footer-brand__content">
                     <span class="footer-eyebrow">FIAP • FRONT-END DESIGN ENGINEERING</span>
                     <h3>TechMatch</h3>
-                    <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
+                    <p>Projeto acadêmico com foco em responsividade...</p>
                 </div>
             </div>
+
             <div class="footer-info">
                 <h4>Contato do grupo</h4>
                 <ul class="footer-list footer-list--contacts">
@@ -218,76 +307,98 @@
                 <p class="footer-note">Repositório e README atualizados no GitHub.</p>
             </div>
         </div>
+
         <div class="footer-meta">
             <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
         </div>
     </footer>
+    <!-- ======================= FIM FOOTER ======================== -->
+
+
+
+    <!-- Scripts essenciais do projeto -->
     <script src="assets/js/theme-toggle.js" defer></script>
     <script src="assets/js/auth.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 
+
+
+    <!-- ========================= OVERLAY DE AUTENTICAÇÃO ========================= -->
     <div class="auth-overlay" data-auth-overlay hidden>
+
         <div class="auth-overlay__panel">
+
+            <!-- Introdução sobre login obrigatório -->
             <div class="auth-overlay__intro">
                 <p class="eyebrow">acesso obrigatório</p>
                 <h2>Entre para liberar o painel de match.</h2>
-                <p>Centralizamos tudo em um único lugar: seus favoritos e as habilidades salvas.</p>
+                <p>Centralizamos tudo em um único lugar...</p>
+
+                <!-- Lista explicativa -->
                 <ul class="auth-overlay__highlights">
-                    <li>
-                        <strong>Histórico seguro</strong>
-                        <span>Os dados ficam somente no seu dispositivo.</span>
-                    </li>
-                    <li>
-                        <strong>Perfis únicos</strong>
-                        <span>Cada conta mantém objetivos e habilidades diferentes.</span>
-                    </li>
-                    <li>
-                        <strong>Guiado e responsivo</strong>
-                        <span>Fluxo otimizado para desktop e celular.</span>
-                    </li>
+                    <li><strong>Histórico seguro</strong><span>Dados salvos no dispositivo.</span></li>
+                    <li><strong>Perfis únicos</strong><span>Objetivos e habilidades próprias.</span></li>
+                    <li><strong>Guiado e responsivo</strong><span>Fluxo otimizado para todos os dispositivos.</span></li>
                 </ul>
+
                 <div class="auth-overlay__actions auth-overlay__actions--stack">
                     <a class="button button-ghost button-small" href="index.html">Voltar para a página inicial</a>
                     <a class="button button-ghost button-small" href="contato.html">Preciso de ajuda</a>
                 </div>
             </div>
+
+            <!-- Painéis inline: login + registro -->
             <div class="inline-auth-panels">
+
+                <!-- Formulário de login -->
                 <form class="form-card form-grid" data-login-form>
                     <h3>Entrar</h3>
                     <p class="form-hint">Use seu usuário para continuar de onde parou.</p>
+
                     <div>
                         <label for="inline-login-username">Usuário</label>
                         <input type="text" id="inline-login-username" name="login-username"
                             placeholder="ex.: maria.dev" required>
                     </div>
+
                     <div>
                         <label for="inline-login-password">Senha</label>
-                        <input type="password" id="inline-login-password" name="login-password" placeholder="••••••"
-                            required>
+                        <input type="password" id="inline-login-password" name="login-password"
+                            placeholder="••••••" required>
                     </div>
+
                     <button class="button button-primary" type="submit">Entrar</button>
                     <p class="form-feedback" data-login-feedback></p>
                 </form>
+
+                <!-- Formulário de registro -->
                 <form class="form-card form-grid" data-register-form>
                     <h3>Registrar</h3>
                     <p class="form-hint">Crie um perfil para acessar o painel de candidatas.</p>
+
                     <div>
                         <label for="inline-register-username">Crie um usuário</label>
                         <input type="text" id="inline-register-username" name="register-username"
                             placeholder="ex.: novo.usuario" required>
                     </div>
+
                     <div>
                         <label for="inline-register-password">Crie uma senha</label>
                         <input type="password" id="inline-register-password" name="register-password"
                             placeholder="mínimo 6 caracteres" required>
                     </div>
+
+                    <!-- Define automaticamente o papel da conta -->
                     <input type="hidden" name="register-role" value="candidate">
+
                     <button class="button button-primary" type="submit">Criar conta</button>
                     <p class="form-feedback" data-register-feedback></p>
                 </form>
-                
+
             </div>
         </div>
     </div>
+    <!-- ======================= FIM OVERLAY ======================== -->
+
 </body>
 </html>
