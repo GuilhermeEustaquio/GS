@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMatch • Login</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page-auth">
+    <header class="main-header">
+        <div class="layout-grid">
+            <a class="brand-mark" href="index.html" aria-label="Voltar para a página inicial">
+                <img class="brand-mark__icon" src="assets/images/logo-icon.svg" alt="Logo TechMatch">
+                <div class="brand-mark__text">
+                    <span>techmatch</span>
+                </div>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false">
+                <span class="menu-toggle__icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-toggle__label">Menu</span>
+            </button>
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+                <a href="quemsomos.html">Integrantes</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contato.html">Contato</a>
+                <a href="match.html" data-nav-match data-role-guard="candidate">
+                    Match para candidatas
+                    <small>Painel principal</small>
+                </a>
+                <a href="match-empresas.html" data-nav-match data-role-guard="company">
+                    Match para empresas
+                    <small>Painel dedicado</small>
+                </a>
+            </nav>
+            <div class="header-controls">
+                <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+                    <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+                    <span class="theme-toggle__label">Modo escuro</span>
+                </button>
+                <div class="auth-controls">
+                    <span class="user-pill" data-user-badge hidden></span>
+                    <a class="button button-ghost button-small" href="login.html" data-login-link>Entrar</a>
+                    <button class="button button-ghost button-small" type="button" data-logout hidden>Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-auth">
+            <div class="layout-grid hero-auth__grid">
+                <div class="hero-auth__intro">
+                    <p class="eyebrow">acesso obrigatório</p>
+                    <h1>Desbloqueie o TechMatch para acompanhar seus matches.</h1>
+                    <p>Os dados do painel são pessoais: guardamos seus favoritos, sua pipeline e os detalhes e habilidades
+                        diretamente no seu navegador. Assim, ninguém altera o seu histórico.</p>
+                    <div class="auth-feature-grid">
+                        <article class="auth-highlight">
+                            <strong>Perfis únicos</strong>
+                            <span>Cada conta possui preferências, interesses e habilidades diferentes para personalizar o
+                                match.</span>
+                        </article>
+                        <article class="auth-highlight">
+                            <strong>Experiência guiada</strong>
+                            <span>Validações no formulário ajudam a finalizar o cadastro em poucos segundos.</span>
+                        </article>
+                        <article class="auth-highlight">
+                            <strong>Para candidatas e empresas</strong>
+                            <span>Escolha o painel ideal e alterne entre os dois fluxos quando precisar.</span>
+                        </article>
+                    </div>
+                    
+                    
+                </div>
+                <div class="hero-auth__panel">
+                    <div class="auth-panel" id="entrar">
+                        <div class="auth-panel__header">
+                            <p class="eyebrow">entrar ou registrar</p>
+                            <h2>Painel rápido e responsivo.</h2>
+                            <p>Preencha apenas os campos necessários. Mantivemos a experiência acessível tanto para desktop
+                                quanto para dispositivos móveis.</p>
+                        </div>
+                        <div class="auth-panels">
+                            <form class="form-card form-grid" data-login-form>
+                                <h3>Entrar</h3>
+                                <div>
+                                    <label for="login-username">Usuário</label>
+                                    <input type="text" id="login-username" name="login-username" placeholder="ex.: maria.dev" autocomplete="username" required>
+                                </div>
+                                <div>
+                                    <label for="login-password">Senha</label>
+                                    <input type="password" id="login-password" name="login-password" placeholder="••••••" autocomplete="current-password" required>
+                                </div>
+                                <button class="button button-primary" type="submit">Entrar</button>
+                                <p class="form-feedback" data-login-feedback aria-live="polite"></p>
+                            </form>
+                            <form class="form-card form-grid" data-register-form>
+                                <h3>Registrar</h3>
+                                <div>
+                                    <label for="register-username">Crie um usuário</label>
+                                    <input type="text" id="register-username" name="register-username" placeholder="ex.: novo.usuario" autocomplete="username" required>
+                                </div>
+                                <div>
+                                    <label for="register-password">Crie uma senha</label>
+                                    <input type="password" id="register-password" name="register-password" placeholder="mínimo 6 caracteres" autocomplete="new-password" minlength="6" required>
+                                </div>
+                                
+                                <button class="button button-primary" type="submit">Criar conta</button>
+                                <p class="form-feedback" data-register-feedback aria-live="polite"></p>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt company-signup" id="cadastro-empresas">
+            <div class="layout-grid split-panel company-signup__grid">
+                <article class="info-card company-signup__intro">
+                    <p class="eyebrow">para empresas</p>
+                    <h3>Cadastro simples para liberar o painel Match Empresas.</h3>
+                    <p>Os formulários a seguir são iguais aos utilizados pelas candidatas. Criamos este bloco somente para
+                        que recrutadoras tenham um acesso direto ao painel corporativo sem preencher campos adicionais.</p>
+                    <ul>
+                        <li>
+                            Usuário dedicado
+                            <span>Use um identificador curto para compartilhar com seu time.</span>
+                        </li>
+                        <li>
+                            Senha segura
+                            <span>Mínimo de 6 caracteres, igual ao fluxo das candidatas.</span>
+                        </li>
+                        <li>
+                            Papel empresarial
+                            <span>Já habilitamos o acesso ao Match Empresas automaticamente.</span>
+                        </li>
+                    </ul>
+                </article>
+                <div class="company-signup__form">
+                    <form class="form-card form-grid" data-register-form aria-label="Cadastro exclusivo para empresas">
+                        <h4>Registrar empresa</h4>
+                        <small>Mesma experiência do painel das candidatas, porém com acesso corporativo.</small>
+                        <div>
+                            <label for="company-register-username">Usuário corporativo</label>
+                            <input type="text" id="company-register-username" name="register-username" placeholder="ex.: recrutadora.tech" required>
+                        </div>
+                        <div>
+                            <label for="company-register-password">Senha</label>
+                            <input type="password" id="company-register-password" name="register-password" placeholder="mínimo 6 caracteres" minlength="6" required>
+                        </div>
+                        <div>
+                            <label for="company-register-contact">Contato principal (opcional)</label>
+                            <input type="email" id="company-register-contact" name="company-register-contact" placeholder="ex.: talentos@empresa.com">
+                        </div>
+                        <input type="hidden" name="register-role" value="company">
+                        <button class="button button-primary" type="submit">Criar acesso corporativo</button>
+                        <p class="form-feedback" data-register-feedback aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="layout-grid footer-grid">
+            <div class="footer-brand">
+                <span class="footer-brand__tag">ENTREGA</span>
+                <div class="footer-brand__content">
+                    <span class="footer-eyebrow">FIAP • FRONT-END DESIGN ENGINEERING</span>
+                    <h3>TechMatch</h3>
+                    <p>Projeto acadêmico com foco em responsividade, navegação clara e documentação transparente.</p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <h4>Contato do grupo</h4>
+                <ul class="footer-list footer-list--contacts">
+                    <li><a href="mailto:guilhermepeustaquio@gmail.com">guilhermepeustaquio@gmail.com</a></li>
+                    <li><a href="mailto:caiocc2006@gmail.com">caiocc2006@gmail.com</a></li>
+                    <li><a href="mailto:matheustavares1356@gmail.com">matheustavares1356@gmail.com</a></li>
+                </ul>
+                <p class="footer-note">Repositório e README atualizados no GitHub.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Acesse</h4>
+                <ul class="footer-list footer-list--contacts">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quemsomos.html">Quem somos?</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-meta">
+            <small>© 2025 TechMatch — Projeto acadêmico FIAP</small>
+        </div>
+    </footer>
+    <script src="assets/js/theme-toggle.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
